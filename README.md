@@ -1,26 +1,27 @@
 Robot Dynamics and Control
 ================================
-Implementation of Gravity Compensation Algorithm, Recursive Newton-Euler Algorithm (RNEA), PD Control and Computed Torque Control of 1R, 2R, 2R-NP, 3R and RP Robotic Arms on Simulink
--------------------------------
 
-`Gravity Compensation Algorithm`
+This repository contains MATLAB and Simulink code and resources that demonstrate the implementation of Gravity Compensation Algorithm, Recursive Newton-Euler Algorithm (RNEA), PD Control and Computed Torque Control for different robotic arm configurations, including 1R, 2R, 2R-NP, 3R, and RP arms. Each arm's modeling and control are detailed in their respective sections.
 
-* `Aim`: The Gravity Compensation Algorithm is used to counteract the gravitational forces acting on a robotic arm, allowing it to maintain a desired position in the absence of any control input.
-* `How it works`: It calculates and applies torques to counteract the effects of gravity. These torques ensure that the arm doesn't fall due to gravitational forces when no other control inputs are applied. This is particularly important for maintaining stability and safety in robotic systems.
+Before running the simulations, ensure that you have the "Robotics Systems Toolbox" and "Simscape Multibody" MATLAB Add-On installed.
 
-`Recursive Newton-Euler Algorithm (RNEA)`
+Gravity Compensation Algorithm
+--------------------------------
+The Gravity Compensation Algorithm is fundamental to ensure the stability of robotic arms. It counters the gravitational forces acting on the arm, allowing it to maintain its posture and prevent unwanted movement when no control input is applied.
 
-* `Aim`: RNEA is a dynamic simulation and control algorithm used to calculate the joint torques required for a robotic arm to achieve a desired trajectory or configuration.
-* `How it works`: RNEA recursively computes the joint torques by propagating forces and accelerations through the robot's links. It takes into account the inertial properties of the links, such as mass and moment of inertia, to calculate the dynamic response of the robot. This allows for precise control of the arm's motion.
+Recursive Newton-Euler Algorithm (RNEA)
+----------------------------
 
-`PD Control (Proportional-Derivative Control)`
+The Recursive Newton-Euler Algorithm is a dynamic simulation and control technique used to calculate joint torques needed to achieve a desired trajectory or configuration. This algorithm consists of two crucial steps: the forward recursive step for calculating dynamic quantities and the backward recursive step for determining joint torques.
 
-* `Aim`: PD control is a common feedback control technique used in robotics to achieve and maintain desired positions or trajectories.
-* `How it works`: PD control uses two terms - proportional (P) and derivative (D). The proportional term generates a control signal proportional to the error between the desired and actual position. The derivative term acts to dampen oscillations and reduce overshoot. This combination of terms helps the robotic arm approach and maintain the desired position.
+PD Control (Proportional-Derivative Control)
+--------------------------
 
-`Computed Torque Control`
+PD control is a widely used feedback control technique for robotic arms. It generates control signals based on the error between the desired and actual position, facilitating accurate position control while minimizing oscillations.
 
-* `Aim`: Computed Torque Control, also known as inverse dynamics control, is used to control the motion of a robotic arm precisely by accounting for both the desired trajectory and the dynamics of the robot.
-* `How it works`: It involves calculating the torques required to follow a desired trajectory while considering the robot's dynamic model. This control method compensates for inertial and Coriolis forces, allowing for precise control of the robotic arm's motion. It often combines the PD control with the calculated torques to achieve high-performance control.
+Computed Torque Control
+------------------------
+
+Computed Torque Control, or inverse dynamics control, is a precise control strategy that considers the dynamics of the robotic arm. It calculates the joint torques required to follow a desired trajectory while compensating for inertial and Coriolis forces.
 
 
