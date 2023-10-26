@@ -1,0 +1,1 @@
+[robot_rp, importInfo_rp] = importrobot('model.slx');
